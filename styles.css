@@ -1,16 +1,212 @@
+:root{
+    --dk-orange: #f05d1c;
+    --dk-brown: #331a10; 
+    --med-brown: #65351e;
+    --lt-brown: #835e4d;
+    --extra-lt-brown: #9d7d6f;
+
+    /* Other swatches for text & accents */
+    --cream: #fff7ea;
+    --tan: #ffdfad;
+    --black: #000;
+    --teal: #008080;
+
+    /* Shadows for Elements that are Not Square */
+    --filter-shadow-sm: drop-shadow(-3px 3px 7px var(--dk-brown));
+    --filter-shadow-lg: drop-shadow(-6px 6px 10px var(--dk-brown));
+
+    /* Adobe Font Family with Fallbacks */
+    --fonts: "Poster Gothic Round Cond ATF Bold", Tahoma, sans-serif;
+}
+
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #9C9C9C;
+    background-color: var(--teal);
 }
+
+nav {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+/* ---------- Nav Ul Styles --------- */
+/* TO DO */
+nav ul {
+    list-style-type: none;
+    margin: 0 2rem 0 2rem;
+    padding: 0;
+    justify-items: auto;
+    
+}
+/* ---------- Nav Li Styles --------- */
+/* TO DO */
+nav li {
+    float: left;
+}
+/* ---------- Nav a Styles --------- */
+/* TO DO */
+nav a {
+    background-color: var(--dk-orange);
+    color: var(--cream);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    filter: var(--filter-shadow-lg);
+    padding: 15px;
+}
+/* ---------- Navigation a Hover Styles ---------- */
+nav a:hover {
+    background-color: var(--lt-brown);
+    filter: var(--filter-shadow-sm);
+}
+
 .navbutton{
-    background-color: #04AA6D;
-    color: white;
+    background-color: var(--black);
+    color: var(--cream);
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
     padding: 10px 25px 10px 25px;
     margin-top: 4px;
     margin-right: 20px;
     border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#services ul{
+    list-style-type: none;
+}
+
+#contact {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--dk-brown);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--cream);
+}
+
+#contact h3, p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--dk-brown);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--cream);
+  }
+  
+  /* Labels */
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cream);
+  }
+  
+  /* Required field indicator */
+  form .required {
+    color: var(--teal);
+  }
+  
+  /* Input and textarea fields */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form input[type="tel"]:focus,
+  form textarea:focus {
+    border-color: var(--dk-brown);
+    outline: none;
+    box-shadow: 0 0 5px var(--dk-brown);
+  }
+  
+  /* Textarea customization */
+  form textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  /* Submit button */
+  form input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--dk-orange);
+    color: var(--cream);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Submit button hover effect */
+  form input[type="submit"]:hover {
+    background-color: darken(var(--dk-orange), 10%);
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea {
+      font-size: 12px;
+    }
+  
+    form input[type="submit"] {
+      font-size: 14px;
+    }
+  }
+  
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    margin-top: auto;
 }
